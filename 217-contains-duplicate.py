@@ -7,7 +7,7 @@
 
 # 2
 # 2nd best approach- sort the array, so we will only compare neighbouring elements. Do this for all elements of array.
-# TC = O(nlogn) (n for all elements, log n for sorting)
+# TC = O(nlogn) (for sorting)
 # SC = O(1)  (we are not creating another array)
 
 #------------------------------------------------------------------------------------------------------------------------------------------------------
