@@ -39,8 +39,9 @@ class Solution:
     
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-#3 For solve this problem in O(1) SC, we can sort the array, and compare it. TC depends on what sorting algorithm is used. It could be O(n^2)(for bubble sort) or best one- (nlogn).
-#Good sorting algorithms has SC = O(n)(which has TC = nlogn), sometimes SC could be O(1). Normally Interviewers might consider sorting as O(1),
+#3 For solve this problem in O(1) SC, we can sort the array, and compare it. TC depends on what sorting algorithm is used. It could be O(n^2)(for bubble sort) 
+# or best one- (nlogn).
+# Good sorting algorithms has SC = O(n)(which has TC = nlogn), sometimes SC could be O(1). Normally Interviewers might consider sorting as O(1),
 # so discuss this with him.
 # TC = O(nlogn)- depending on sorting algorithm
 # SC = O(1)
