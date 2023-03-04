@@ -5,6 +5,7 @@
 # present, we 'get' that value and add 1. So, if the key is not already present, we would 'get' default value 0 and add 1. This way we create 2 hashmaps.
 # Next, for each 'key'(c) in hashmap S, we comapre it's 'value'(countT[c]) in hashmap T. If that key is not present, return default value to 0.
 # If values of those keys are not equal, return False. If False  isn't returned at all, return True.
+
 # TC = O(n)
 # SC = O(n)
 
@@ -30,6 +31,7 @@ class Solution:
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 #2 Same approach as above using Python functions, may not work in interviews. Above is the entire process coded as this
+
 # TC = O(n)
 # SC = O(n)
 
@@ -43,6 +45,7 @@ class Solution:
 # or best one- (nlogn).
 # Good sorting algorithms has SC = O(n)(which has TC = nlogn), sometimes SC could be O(1). Normally Interviewers might consider sorting as O(1),
 # so discuss this with him.
+
 # TC = O(nlogn)- depending on sorting algorithm
 # SC = O(1)
 
