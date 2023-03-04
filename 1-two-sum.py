@@ -1,5 +1,6 @@
 # 1- Brute Force- take 1 element of the array and add it with other elements, and check if it matches the target. Do it with every element that comes after the checked
 # one.
+
 # TC = O(n^2)
 # SC = O(1)
 
