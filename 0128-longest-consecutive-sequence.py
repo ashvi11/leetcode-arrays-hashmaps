@@ -1,3 +1,11 @@
+# Sorting:
+# We can sort the entire array, and just keep checking neighbouring elements if they are consecutive. If so, it's a sequence, else a new sequence has started.
+
+# TC = O(nlogn) as sorting is nlogn
+# SC = O(1) as sorting might be considered in-place, so no new data structure is created
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 # NEETCODE Best solution:
 # Draw a numberline and plot the elements on it. We see that consecutive elements would be forming a group(sequence) that would be separate from other groups/elements.
 # We see that there are multiple sequences. We just need to see if a sequence has started, and how long it is.
