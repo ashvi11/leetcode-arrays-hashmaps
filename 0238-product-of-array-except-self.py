@@ -1,3 +1,11 @@
+
+# Division is not allowed, else we could multiply all elements in the array, and then divide it by that number
+
+# TC = O(n)
+# SC = O(1)(we are not creating new array. For this question, res = [] is not considered as extra space)
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 # NEETCODE concept:
 # The idea is to multiply numbers before(pre) that number, and after(post) that number
 # Make 2 arrays, pre and post. We'll be populating pre array with product of numbers before nums[i] and post array with product of numbers after nums[i]
@@ -23,12 +31,11 @@ class Solution:
       res = []
       
       pre_prod = 1
-      post_prod = 1
-      
       for i in range(len(nums)-1):
         pre_prod *= nums[i]
         pre.append(pre_prod)
         
+      post_prod = 1 
       for j in range(len(nums)-1, 0, -1):
         post_prod *= nums[j]
         post.append(post_prod)
@@ -42,5 +49,31 @@ class Solution:
       
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------      
 
+# NEETCODE Best Solution
+# The idea is to multiply numbers before(pre) that number, and after(post) that number. So we will us 2 pass approach.
+# In pass 1, we will iterate through array to get pre values, with the default 1st value = 1. 
+# In pass 2, we will iterate through array in reverse, and get post values, and multiply them with pre values. 1st post value = default value = 1
+# We are assigning value first, then mutiplying because we need 1 as the first value for both iterations
 
+# TC = O(n) (linear time complexity)
+# SC = O(1) (we are not creating new array. For this question, res = [] is not considered as extra space)
 
+class Solution:
+    def productExceptSelf(self, nums: List[int]) -> List[int]:
+        
+        res = [1] * len(nums)
+        
+        pre_product = 1
+        post_product = 1
+        
+        for i in range(len(nums)):
+            res[i] = pre_product
+            pre_product *= nums[i]
+            
+        for i in range(len(nums)-1, -1, -1):
+            res[i] *= post_product
+            post_product *= nums[i]
+        
+        return res
+    
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
