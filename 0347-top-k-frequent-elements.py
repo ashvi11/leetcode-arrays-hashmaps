@@ -35,7 +35,7 @@ class Solution:
     def topKFrequent(self, nums: List[int], k: int) -> List[int]:
       
       count = {}
-      freq = [[] for x in len(nums)+1] 
+      freq = [[] for x in range(len(nums)+1)] 
       res = []
       
       for i in nums:
