@@ -1,5 +1,23 @@
 #1 Sort each string in the list. Hence, after sorting, anagrams will become equivalent strings.
 
+class Solution:
+    def groupAnagrams(self, strs: List[str]) -> List[List[str]]:
+
+        res = defaultdict(list)
+
+        for s in strs:
+            sorted_s = sorted(s)
+            sorted_s_str = ''.join(sorted_s)
+
+            for sorted_s_str in res:
+                res[sorted_s_str].append(s)
+            else:
+                res[sorted_s_str] = [s]
+
+        return res.values()
+
+
+
 #TC = O(m*nlogn) where n is average length of each string(sorting n = nlogn), and m is length of the list(doing nlogn m times)   
 
 
