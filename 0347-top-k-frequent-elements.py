@@ -25,9 +25,16 @@
 # Then we go from right to left into the freq list, as we need k elements with highest frequency
 # As soon as we get the k elements, we return the list
 
-# TC = O(n) (max size of the freq array is equal to len(nums) = n, and at freq[p], worst case, all n elements are distinct in nums, so
+# TC = O(n) (iterate over main inpur array nums- len(nums) = n, and at freq[p], worst case, all n elements are distinct in nums, so
 # we are going to iterate at one element of array freq n times, n + n = 2n ~ n ) 
 # SC = O(n) (creating hashmap count, and array freq) 
+
+# Bucket Sort- Put elements in bigger buckets, and then sort those buckets. At first, it would seem like elements could be buckets, and count could be inside it, but then it won't work because 
+# it's unbounded. E.g- [1,1,2,2,2,100]- now we need to make buckets from 1 to 100, but we have only 6 elements- what if we had 1,000,000 in place of 100? We'd need to make buckets from 1 to 1M 
+# although we have only 6 elements.
+# A clever solution to this is making frequency as buckets, and elements could be inside it. This will always be bounded, because no. of buckets could never be more than length of nums.
+# Even if all the elements in the array are same, they won't be more than 6 times- [1,1,1,1,1,1]- so this will go in bucket '6'- nothing will go in bucket > '6', hence 6 is max bucket.
+# E.g- [1,1,2,2,2,100]- 1 will go in bucket '2'(has frequency 2), 2 will go in bucket '3' and 100 will go in bucket '1'.
 
 
 
