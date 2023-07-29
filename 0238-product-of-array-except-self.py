@@ -50,7 +50,7 @@ class Solution:
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------      
 
 # NEETCODE Best Solution
-# The idea is to multiply numbers before(pre) that number, and after(post) that number. So we will us 2 pass approach.
+# The idea is to multiply numbers before(pre) that number, and after(post) that number. So we will use 2 pass approach.
 # In pass 1, we will iterate through array to get pre values, with the default 1st value = 1. 
 # In pass 2, we will iterate through array in reverse, and get post values, and multiply them with pre values. 1st post value = default value = 1
 # We are assigning value first, then mutiplying because we need 1 as the first value for both iterations
