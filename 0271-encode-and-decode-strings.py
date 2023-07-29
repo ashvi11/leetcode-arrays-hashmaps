@@ -5,7 +5,8 @@
 # We can use join and split using any delimeter, but the challenge is that that delimeter can be one of the characters of the actual strings.
 # So we figured out a way- we will first put length of string, then delimeter #, then the string itself. 
 # eg: ['i', 'love', 'leetcode'] will become '1#i4#love8#leetcode' 
-# So whenever we encounter a #, we will go back to the left get the integer before it, and will forward to the right to get the word a we have the length of the word. 
+# So whenever we encounter a #, we will go back to the left get the integer before it, 
+# and will forward to the right to get the word as we have the length of the word. 
 # This will never fail.
 
 # TC of encode and decode = O(n) where n is total number of characters in strs and s
