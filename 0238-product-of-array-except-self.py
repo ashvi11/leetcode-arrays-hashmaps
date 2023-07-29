@@ -12,7 +12,7 @@
 # example- nums = |  2  |  5  |  1  |  3  |
 # there is nothing before 2, so pre[0] = 1, there is only 2 before 5, so pre[1] = 2, there are 2, 5 before 1, so product of numbers before 1 pre[2] = 10, pre[3] = 10
 # pre = |  1  |  2  |  10  |  10  |
-# there is nothing after 3, so post[3] = 1- but populating in reverse isn't possible, so I'll populate from left to right, and then reverse the array. So post[0] = 1
+# there is nothing after 3, so post[3] = 1- but appending in reverse isn't possible, so I'll populate from left to right, and then reverse the array. So post[0] = 1
 # after 1, there is 3, so post[1] = 3, after 5 there is 1, 3, so product of numbers after 5 = post[2] = 3, post[3] = 15
 # post = |  1  |  3  |  3  |  15  |
 # post[::-1] = |  15  |  3  |  3  |  1  |
