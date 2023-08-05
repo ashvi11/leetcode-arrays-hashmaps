@@ -6,6 +6,11 @@
 # Keep calculating length by r-l+1
 # Keep updating longest variable after each loop running once
 
+# (The concept is to make a substring using l and r pointers, this substring shouldn't have repeating characters. So start by having both pointers at index 0, and keep incrementing r. 
+# If a character is not already in the set, add it. If it's already in the set, that means we've encountered a repeating character. So the string needs to be shrinked. 
+# So increment left pointer till we have all unique characters in the string. Now since our current string will have elements from current l to r, we need to remove previous l characters from the set. 
+# Keep repeating until we reach the end of the string and update longest variable after each loop. length will be r-l+1)
+
 # TC = O(n)
 # SC = O(n) as we created a set
 
