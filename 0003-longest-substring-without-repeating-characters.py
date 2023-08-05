@@ -1,7 +1,10 @@
 # NEETCODE Best solution:
-# Create 2 pointers l and r at 0 index. Keep adding r to a new Set. As soon as we encouter a character during iteration that is already present in the set, 
-# remove s[l] from set, and increment l.
-# Keep adding s[r] to the set, calculating longest, and incrementing r in either case.
+# The concept is to find all substrings without repeating charaters that is present in the input. So we start with 1 character- point both l and r to index 0. 
+# Now keep incrementing r and adding it to a new set if already not there. When r is on a character that is already in the set, increment l, and remove the previous l from the set
+# Here l and r are formming a substring, that substring should not have any repeating characters, hence we keep incrementing l and removing previous l till all the characters between
+# s[l] and s[r] are not unique.
+# Keep calculating length by r-l+1
+# Keep updating longest variable after each loop running once
 
 # TC = O(n)
 # SC = O(n) as we created a set
