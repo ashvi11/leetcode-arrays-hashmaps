@@ -30,8 +30,10 @@ class Solution:
 # now the question is to return the position of the target IF it was in the array
 # after each execution of the loop, the array is halved, and we get closer to the position of the target
 # at the last execution, `start`, `end` and `middle` will be poining at the same element, or would be very close to one another.
-#   target < nums[middle] --> we need to search left part of the array --> make end pointer = middle-1 --> so `end` will be in the left of `start` which breaks while loop, so return `middle` or `start`
-#   target > nums[middle] --> we need to search right array --> make start pointer = middle+1 --> `start` will be in the right of `end` which breaks the while loop, so return `middle + 1` or `start`
+#   target < nums[middle] --> we need to search left part of the array --> make end pointer = middle-1 --> 
+#     so `end` will be in the left of `start` which breaks while loop, so return `middle` or `start`
+#   target > nums[middle] --> we need to search right array --> make start pointer = middle+1 --> 
+#     `start` will be in the right of `end` which breaks the while loop, so return `middle + 1` or `start`
 
 # Time Complexity = O(logn)- with each loop executed, the size of the array we search is halved
 # Space Complexity = O(1)- no extra space used
