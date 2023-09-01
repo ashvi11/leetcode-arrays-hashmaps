@@ -60,7 +60,7 @@ class Solution:
 
 # NEETCODE Neat-code:
 
-# Same logic and TC, SC as above, only the code is smaller adn neater.
+# Same logic and TC, SC as above, only the code is smaller and neater.
 
 class Solution:
     def search(self, nums: List[int], target: int) -> int:
